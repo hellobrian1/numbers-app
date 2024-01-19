@@ -1,0 +1,22 @@
+<head>
+  <title>Simple Addition</title>
+  <script>
+    function addNumbers() {
+      let number1Input = document.getElementById("number1").value;
+      let number2Input = document.getElementById("number2").value;
+      let sum = Number(number1Input) + Number(number2Input);
+      document.getElementById("sum").innerText = sum;
+    }
+  </script>
+</head>
+<body>
+<header> Arithmetic</header>
+  <form>
+    <input id="number1" name="number1" type="number"><br>
+    <input id="number2" name="number2" type="number"><br><br>
+    <input type="button" value="=" onclick="addNumbers()">
+    <label id="sum"></label>
+  </form>
+
+</body>
+</html>
