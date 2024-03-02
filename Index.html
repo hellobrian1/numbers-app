@@ -1,5 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Simple Addition</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .tool-section {
+      margin-bottom: 20px;
+    }
+    header {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
   <script>
     function addNumbers() {
       let number1Input = document.getElementById("number1").value;
@@ -7,16 +23,38 @@
       let sum = Number(number1Input) + Number(number2Input);
       document.getElementById("sum").innerText = sum;
     }
+    // You will need to add JavaScript functions for prime check and Caesar cipher
   </script>
 </head>
 <body>
-<header> Arithmetic</header>
+
+<div class="tool-section">
+  <header>Arithmetic</header>
   <form>
-    <input id="number1" name="number1" type="number"><br>
-    <input id="number2" name="number2" type="number"><br><br>
-    <input type="button" value="=" onclick="addNumbers()">
+    <input id="number1" name="number1" type="number"> +
+    <input id="number2" name="number2" type="number"> =
     <label id="sum"></label>
+    <input type="button" value="Calculate" onclick="addNumbers()">
   </form>
+</div>
+
+<div class="tool-section">
+  <header>Prime check</header>
+  <form>
+    <!-- Prime check form elements go here -->
+    Number to test: <input id="numberToTest" type="number">
+    <input type="button" value="Check" onclick="checkPrime()">
+  </form>
+</div>
+
+<div class="tool-section">
+  <header>Caesar cipher</header>
+  <form>
+    <!-- Caesar cipher form elements go here -->
+    Text: <input id="cipherText" type="text">
+    <input type="button" value="Cipher" onclick="cipherText()">
+  </form>
+</div>
 
 </body>
 </html>
